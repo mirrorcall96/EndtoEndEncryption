@@ -24,7 +24,7 @@
 	```
 6. Now using deffie-Hellman we can mix `our` private key with `other` client to generate `secreyKey`
 	```javascript
-	let secretKey = client.generateKeys(otherPublicKey).toString("hex");
+	let secretKey = client.computeSecret(otherPublicKey).toString("hex");
 	```
 7. Other client will use `his` private Key with `our` public key to generate the same `secreyKey`
 
