@@ -19,7 +19,7 @@
    let client = ecdh("secp256k1");
    ```
 
-6. we then just use method `generateKeys()` to generate the public key and private key for the variable client
+6. we then just use method `generateKeys()` to generate the public key and private key for the `client`
    ```javascript
    client.generateKeys();
    ```
@@ -33,4 +33,14 @@
 
    ```javascript
    let privateKey = client.getPrivateKey(null, "compressed");
+   ```
+9. privateKey and public key will be in type `Buffer` , in order to change it to string (for storing in database for example) use `JSON.stringify`
+   ```javascript
+   let stringPublicKey = JSON.stringify(publicKey)
+   let stringPrivateKey = JSON.stringify(privateKey)
+   ```
+9. to change it again to `Buffer` we will use `JSON.parse` and `Buffer.from`
+   ```javascript
+   let publicKeyfromString = Buffer.from(JSON.parse(stringPublicKey).data);
+   let privateKeyfromString = Buffer.from(JSON.parse(stringPrivateKey).data);
    ```
