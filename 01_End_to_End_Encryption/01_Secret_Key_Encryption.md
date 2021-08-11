@@ -28,5 +28,5 @@
 8. for decryption we use `CryptoJS.AES.decrypt(encryptedMessage,secretKey)` and we add `toString(CryptoJS.enc.Utf8)' so we can get the plain text before encryption 
 
    ```javascript
-   let plainText = CryptoJS.AES.decrypt(encrypted,key).toString(CryptoJS.enc.Utf8);
+   let plainText = CryptoJS.AES.decrypt(encrypted,"SuperSecretKey").toString(CryptoJS.enc.Utf8);
    ```
