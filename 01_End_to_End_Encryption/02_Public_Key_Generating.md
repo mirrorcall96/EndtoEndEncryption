@@ -1,19 +1,19 @@
 ![SecreyKey](https://i.imgur.com/cMLCFX6.png)
 
-1. We will use `create-ecdh` to generate our public and private keys, there is many
+1. We will use `create-ecdh` to generate our public and private keys
    ```shell
    $ yarn add create-ecdh
    ```
-2. create-ecdh have two versions 
+2. `create-ecdh` have two versions 
    1. for nodejs  ->   we require `create-ecdh`
-   ```javascript
-   const ecdh = require("create-ecdh");
-   ```
+      ```javascript
+      const ecdh = require("create-ecdh");
+      ```
    2. for browser (react)  ->  we require `create-ecdh/browser`
-   ```javascript
-   const ecdh = require("create-ecdh/browser");
-   ```
-5. we create our variable client and we use ecdh with curve `secp256k1` (you can use other curves)
+      ```javascript
+      const ecdh = require("create-ecdh/browser");
+      ```
+5. we create our variable `client` and we use ecdh with curve `secp256k1` (you can use other curves)
 
    ```javascript
    let client = ecdh("secp256k1");
