@@ -1,3 +1,4 @@
+![SecreyKey](https://i.imgur.com/JwYJJ7s.jpg)
 
 1. We will use `Crypto-js` to encrypt our text.
    ```shell
@@ -15,7 +16,7 @@
 
 6. we use `CryptoJS.AES` for AES (iv gernerated by default)
 
-![SecretKey](https://i.imgur.com/eMwCY0O.png)
+![SecretKeyEncryption](https://i.imgur.com/eMwCY0O.png)
 
 
 7. for encryption we use `CryptoJS.AES.encrypt(message,secretKey)` and we add `toString()' so we can store it in our db or send it as a message
